@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: rgb(56, 88, 124);
+            color: rgb(255, 255, 255);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+                        }
+        body{
+     background-color: rgb(132, 103, 158);
+     color: aliceblue;
+     font-size: larger;   
+        }
+    </style>
+</head>
+<body>
+<div id="area" onclick = "clicar()" onmouseenter="entrar()" onmouseout="saiu()">
+    Interaja...
+</div>    
+
+<script>
+     var a = document.getElementById('area')
+function clicar() {
+    a.innerText = 'Clicou!'
+    a.style.background = 'red'
+    a.style.color = 'black'
+}
+function entrar(){
+    a.innerText = 'Entrou!'
+    a.style.background = 'green'
+    a.style.color = 'blue'
+}
+function saiu(){
+    a.innerText =  'Saiu!'
+    a.style.background = 'black'
+    a.style.color = 'yellow'
+}
+//um outro jeito de fazer isso e deixar o html limpo, é ao invés de usar uma DIV conforme a linha 25 no html, fazer assim direto no JS <script>://
+//var a = document.getElementById('area')
+//a.addEventListener('click' , clicar)
+//a.addEventListener('mouseenter' , entrar)
+//a.addEventListener('mouseout' , sair)
+</script>
+</body>
+</html>
